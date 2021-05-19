@@ -1,6 +1,7 @@
 package com.sw.reddit.controller;
 
 import com.sw.reddit.dto.RegisterRequest;
+import com.sw.reddit.service.AuthService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,6 +15,7 @@ import static org.springframework.http.HttpStatus.OK;
 @RequestMapping("/api/auth")
 @AllArgsConstructor
 public class AuthController {
+    private final AuthService authService;
 
     @PostMapping("/signup")
     public ResponseEntity<String> signup(@RequestBody RegisterRequest registerRequest) {
