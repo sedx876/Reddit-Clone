@@ -1,5 +1,7 @@
 package com.sw.reddit.config;
 
+import com.sw.reddit.security.JwtAuthenticationFilter;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.BeanIds;
@@ -13,9 +15,11 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 @EnableWebSecurity
+@AllArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final UserDetailsService userDetailsService;
+    private final JwtAuthenticationFilter jwtAuthenticationFilter;
 
 
     @Bean(BeanIds.AUTHENTICATION_MANAGER)

@@ -9,6 +9,7 @@ import com.sw.reddit.model.User;
 import com.sw.reddit.model.VerificationToken;
 import com.sw.reddit.repository.UserRepository;
 import com.sw.reddit.repository.VerificationTokenRepository;
+import com.sw.reddit.security.JwtProvider;
 import lombok.AllArgsConstructor;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -29,11 +30,12 @@ import java.util.UUID;
 @Transactional
 public class AuthService {
 
-    private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
+    private final UserRepository userRepository;
     private final VerificationTokenRepository verificationTokenRepository;
     private final MailService mailService;
     private final AuthenticationManager authenticationManager;
+    private final JwtProvider jwtProvider;
     private final RefreshTokenService refreshTokenService;
 
     @Transactional
