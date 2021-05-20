@@ -1,5 +1,7 @@
 package com.sw.reddit.service;
 
+import com.sw.reddit.dto.AuthenticationResponse;
+import com.sw.reddit.dto.LoginRequest;
 import com.sw.reddit.dto.RegisterRequest;
 import com.sw.reddit.exceptions.SpringRedditException;
 import com.sw.reddit.model.NotificationEmail;

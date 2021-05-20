@@ -1,5 +1,6 @@
 package com.sw.reddit.controller;
 
+import com.sw.reddit.dto.AuthenticationResponse;
 import com.sw.reddit.dto.LoginRequest;
 import com.sw.reddit.dto.RegisterRequest;
 import com.sw.reddit.service.AuthService;
