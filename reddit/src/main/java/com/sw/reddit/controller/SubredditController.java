@@ -1,5 +1,7 @@
 package com.sw.reddit.controller;
 
+import com.sw.reddit.dto.SubredditDto;
+import com.sw.reddit.service.SubredditService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
